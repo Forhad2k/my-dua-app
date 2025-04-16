@@ -6,12 +6,18 @@ export default function CategorySidebar({
   toggleSubcategories,
   activeCategoryId,
   handleDuaClick,
+  menu,
+  handleMenuClick
 }) {
   return (
-    <div className="w-md bg-white rounded-3xl border border-[#E2E2E2] hidden md:block overflow-y-auto overflow-x-auto max-h-[85vh] scroll-hidden">
-      <h3 className="text-center sticky top-0 bg-[#1FA45B] p-4 rounded-t-2xl text-xl text-white">
+    <div
+  className={`w-full max-w-xs bg-white rounded-3xl border border-[#E2E2E2] md:block overflow-y-auto overflow-x-auto max-h-[85vh] scroll-hidden
+    ${menu ? "absolute top-0 left-0 z-50 h-screen md:relative" : "hidden"}`}
+> 
+      <h3 className=" hidden md:block text-center sticky top-0 bg-[#1FA45B] p-4 rounded-t-2xl text-xl text-white">
         Categories
       </h3>
+       <div  className="md:hidden flex sticky top-0 justify-end"><Image src="/catagory/close.png" width={50} height={50} alt="close" onClick={() => handleMenuClick()}  className="min-w-2 p-3 m-2"/></div>
       <ul className="">
         {categories.map((category) => (
           <li key={category.id} className="m-4  bg-white rounded-lg">

@@ -9,11 +9,11 @@ const poppins = Poppins({
   weight: ['400', '600'],  // You can adjust the font weights as per your needs
 });
 
-function Navber() {
+function Navber({handleMenuClick}) {
   return (
     <div className="flex justify-between w-full h-14 items-center  md:mt-10">
       {/* Company Name */}
-      <button className="  md:hidden  rounded-sm p-3 flex m-1 justify-center">
+      <button className="  md:hidden  rounded-sm p-3 flex m-1 justify-center"onClick={() => handleMenuClick()}>
           <Image
             src="/Navber/menu.png" // Correct path starting from the public folder
             alt="Search"

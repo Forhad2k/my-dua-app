@@ -11,6 +11,7 @@ export default function Home() {
   const [categories, setCategories] = useState([]);
   const [dua, setDua] = useState([]);
   const [Subcategory, setSubCategory] = useState([]);
+  const [menu, setMenu] = useState(false);
   const [activeCategoryId, setActiveCategoryId] = useState(null);
   const [subcategoryId, setSubcategoryId] = useState(1);
 
@@ -22,6 +23,9 @@ export default function Home() {
 
   const handleDuaClick = (subcategoryId) => {
     setSubcategoryId(subcategoryId);
+  }
+  const handleMenuClick = () => {
+    setMenu(!menu);
   }
 
 
@@ -53,7 +57,7 @@ export default function Home() {
 
     <div className="block md:flex md:flex-grow md:flex-col pb-14 md:pb-0"> {/* space for bottom sticky on mobile */}
       <section className="w-full">
-        <Navber />
+        <Navber handleMenuClick={handleMenuClick} />
       </section>
       <section className="flex bg-[#F7F8FA] w-full mt-3 space-x-4">
         <CategorySidebar
@@ -62,6 +66,8 @@ export default function Home() {
           toggleSubcategories={toggleSubcategories}
           activeCategoryId={activeCategoryId}
           handleDuaClick={handleDuaClick}
+          menu={menu}
+          handleMenuClick={handleMenuClick}
         />
         <DuaCard
           dua={dua}
