@@ -3,13 +3,13 @@ import Image from "next/image";
 
 function Sideber() {
   const images = [
-    "./Sideber/1.png",
-    "./Sideber/2.png",
-    "./Sideber/3.png",
-    "./Sideber/4.png",
-    "./Sideber/5.png",
-    "./Sideber/6.png",
-    "./Sideber/7.png",
+    "/Sideber/1.png",
+    "/Sideber/2.png",
+    "/Sideber/3.png",
+    "/Sideber/4.png",
+    "/Sideber/5.png",
+    "/Sideber/6.png",
+    "/Sideber/7.png",
   ];
   const hoverText = [
     "Home",
@@ -27,7 +27,7 @@ function Sideber() {
       key={index}
     >
       <Image
-        src={`/${image}`}
+        src={`${image}`}
         alt={`Image ${index + 1}`}
         width={500}
         height={500}
