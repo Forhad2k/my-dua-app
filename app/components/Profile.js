@@ -56,7 +56,7 @@ function Profile() {
           {settings.map((setting, index) => (
             <div
               key={index}
-              className={`flex items-center mb-3.5 space-x-2 bg-[#F7F8FA] text-[#868686] p-3 rounded-sm w-72 ${setting.isHighlighted ? 'text-green-500' : ''}`}
+              className={`flex items-center mb-3.5 space-x-2 bg-[#F7F8FA] cursor-pointer text-[#868686] p-3 rounded-sm w-72 ${setting.isHighlighted ? 'text-green-500' : ''}`}
             >
                 <span className='bg-[#E8F0F5] rounded-full p-2'>
                   <Image src={`${setting.icon}`} alt={setting.label} width={24} height={24} />
