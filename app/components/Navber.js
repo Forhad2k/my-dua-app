@@ -40,6 +40,7 @@ function Navber() {
             alt="Search"
             width={20}
             height={20}
+            className='min-w-6'
           />
         </button>  <button className=" md:hidden bg-[#E8F0F5] rounded-sm p-3 flex m-1 justify-center">
           <Image
@@ -47,6 +48,7 @@ function Navber() {
             alt="Search"
             width={20}
             height={20}
+            className='min-w-6'
           />
         </button>
       </div>
